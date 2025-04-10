@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <form id="formulariocrear">
+
+            <div class="mb-3">
+                <label for="" class="form-label">nombre</label>
+                <input required type="text" class="form-control" name="nombre" id="nombre" aria-describedby="helpId"
+                    placeholder="" />
+                <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">apellido</label>
+                <input required type="text" class="form-control" name="apellido" id="apellido" aria-describedby="helpId"
+                    placeholder="" />
+                <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">email</label>
+                <input required type="email" class="form-control" name="email" id="email" aria-describedby="helpId"
+                    placeholder="" />
+                <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">telefono</label>
+                <input required type="text" class="form-control" name="telefono" id="telefono" aria-describedby="helpId"
+                    placeholder="telefono" />
+                <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">direccion</label>
+                <input required type="text" class="form-control" name="direccion" id="direccion"
+                    aria-describedby="helpId" placeholder="" />
+                <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">fecha de registro</label>
+                <input required type="text" class="form-control" name="fecha_registro" id="fecha_registro"
+                    aria-describedby="helpId" placeholder="" />
+                <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+
+
+
+            
+
+
+            <div class="mb-3">
+
+                <button type="reset" class="btn btn-danger">
+                    Limpiar
+                </button>
+
+
+                <button type="submit" class="btn btn-primary">
+                    Crear
+                </button>
+
+
+            </div>
+        </form>
+    </div>
+
+
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">nombre</th>
+                        <th scope="col">apellido</th>
+                        <th scope="col">email</th>
+                        <th scope="col">telefono</th>
+                        <th scope="col">direccion</th>
+                        <th scope="col">fecha_registro</th>
+                        <th scope="col">acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabladinamica">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        Modal Editar
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form id="formularioeditar">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Id</label>
+                                <input
+                                disabled
+                                    type="text"
+                                    class="form-control"
+                                    name="ideditar"
+                                    id="ideditar"
+                                    aria-describedby="helpId"
+                                    placeholder=""
+                                />
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="" class="form-label">nombre</label>
+                                <input required type="text" class="form-control" name="nombreeditar" id="nombreeditar" aria-describedby="helpId"
+                                    placeholder="" />
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="" class="form-label">apellido</label>
+                                <input required type="text" class="form-control" name="apellidoeditar" id="apellidoeditar" aria-describedby="helpId"
+                                    placeholder="" />
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+                
+                            <div class="mb-3">
+                                <label for="" class="form-label">email</label>
+                                <input required type="email" class="form-control" name="emaileditar" id="emaileditar" aria-describedby="helpId"
+                                    placeholder="" />
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+                
+                            <div class="mb-3">
+                                <label for="" class="form-label">telefono</label>
+                                <input required type="text" class="form-control" name="telefonoeditar" id="telefonoeditar" aria-describedby="helpId"
+                                    placeholder="telefono" />
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="" class="form-label">direccion</label>
+                                <input required type="text" class="form-control" name="direccioneditar" id="direccioneditar"
+                                    aria-describedby="helpId" placeholder="" />
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="" class="form-label">fecha de registro</label>
+                                <input required type="text" class="form-control" name="fecha_registroneditar" id="fecha_registroeditar"
+                                    aria-describedby="helpId" placeholder="" />
+                                <small id="helpId" class="form-text text-muted">Help text</small>
+                            </div>
+                
+                
+                
+                            <div class="mb-3">
+                
+                                <button type="reset" class="btn btn-danger">
+                                    Limpiar
+                                </button>
+                
+                
+                                <button type="submit" class="btn btn-success">
+                                    Guardar
+                                </button>
+                
+                
+                            </div>
+                        </form>                        
+
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalTitleId"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalTitleId">
+                  Modal Eliminar
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="container-fluid">
+                <h1>Estas seguro de eliminar???</h1>
+                  <form id="formularioeliminar">
+                      <div class="mb-3">
+                          <label for="" class="form-label">Id</label>
+                          <input
+                          disabled
+                              type="text"
+                              class="form-control"
+                              name="ideliminar"
+                              id="ideliminar"
+                              aria-describedby="helpId"
+                              placeholder=""
+                          />
+                          <small id="helpId" class="form-text text-muted">Help text</small>
+                      </div>
+                      
+                     
+          
+          
+                      <div class="mb-3">
+          
+                          <button type="submit" class="btn btn-danger">
+                              Eliminar
+                          </button>
+          
+          
+                      </div>
+                  </form>                        
+
+
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                  Close
+              </button>
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+    <script>
+        const urlAPI = 'http://localhost:8000/usuarios';
+
+
+
+        //Mostarart
+        async function cargarUsuarios() {
+
+            const respuesta = await fetch(urlAPI);
+
+            const datos = await respuesta.json();
+
+            const tabladinamica = document.getElementById('tabladinamica');
+
+            tabladinamica.innerHTML = '';
+
+            datos.forEach(element => {
+                const fila = `
+                        <tr class="">
+                            <td  scope="row">${element._id}</td>
+                            <td>${element.nombre}</td>
+                            <td>${element.apellido}</td>
+                            <td>${element.email}</td>
+                            <td>${element.telefono}</td>                            
+                            <td>${element.direccion}</td>
+                            <td>${element.fecha_registro}</td>
+                            <td>
+
+                                <a
+                                        name=""
+                                        id=""
+                                        class="btn btn-danger"
+                                        onclick="abriModalEliminar('${element._id}')"
+                                        role="button"
+                                        >Eliminar</a
+                                    >
+        
+                                            
+                                    <a
+                                            name=""
+                                            id=""
+                                            class="btn btn-primary"
+                                            onclick="abriModalEditar('${element._id}', '${element.nombre}', '${element.apellido}', '${element.email}', '${element.telefono}', '${element.direccion}', '${element.fecha_registro}')"
+                                            role="button"
+                                            >Editar</a
+                                        >
+        
+                            </td>
+                        </tr>
+            `;
+
+                tabladinamica.innerHTML += fila;
+            });
+
+
+            console.log(datos);
+
+        }
+
+
+        cargarUsuarios();
+
+
+        document.getElementById('formulariocrear').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            crearUsuarios(e);
+        });
+
+        document.getElementById('formularioeditar').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            editarUsuarios(e);
+        });
+
+        document.getElementById('formularioeliminar').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            eliminarUsuarios(e);
+        });
+        
+
+        
+
+        async function crearUsuarios(eventos) {
+            const nuevoUsuario = {
+                nombre: document.getElementById('nombre').value,
+                apellido: document.getElementById('apellido').value,
+                email: document.getElementById('email').value,
+                telefono: document.getElementById('telefono').value,
+                direccion: document.getElementById('direccion').value,
+                fecha_registro: document.getElementById('fecha_registro').value,
+            };
+
+            const respuesta = await fetch(urlAPI, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(nuevoUsuario)
+            });
+
+
+            cargarUsuarios();
+            eventos.target.reset();
+
+
+            
+        }
+    
+        function abriModalEditar(id, nombre, apellido, email, telefono, direccion, fecha_registro ){
+            document.getElementById('ideditar').value = id;
+            document.getElementById('nombreeditar').value = nombre;
+            document.getElementById('apellidoeditar').value = apellido;
+            document.getElementById('emaileditar').value = email;
+            document.getElementById('telefonoeditar').value = telefono;
+            document.getElementById('direccioneditar').value = direccion;
+            document.getElementById('fecha_registroeditar').value = fecha_registro;
+      
+            
+            new bootstrap.Modal(document.getElementById('modalEditar')).show();
+        }
+
+
+
+        async function editarUsuarios(eventos) {
+
+            const id = document.getElementById('ideditar').value;
+
+            const editarUsuario = {
+                nombre: document.getElementById('nombreeditar').value,
+                apellido: document.getElementById('apellidoeditar').value,
+                email: document.getElementById('emaileditar').value,
+                telefono: document.getElementById('telefonoeditar').value,
+                direccion: document.getElementById('direccioneditar').value,
+                fecha_registro: document.getElementById('fecha_registroeditar').value
+            };
+
+            const respuesta = await fetch(`${urlAPI}/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(editarUsuario)
+            });
+
+
+            cargarUsuarios();
+            bootstrap.Modal.getInstance(document.getElementById('modalEditar')).hide();
+            eventos.target.reset();
+            
+        }
+
+        
+        function abriModalEliminar(id){
+            document.getElementById('ideliminar').value = id;
+            new bootstrap.Modal(document.getElementById('modalEliminar')).show();
+        }
+
+
+
+        async function eliminarUsuarios(eventos){
+            const id = document.getElementById('ideliminar').value;
+
+            const respuesta = await fetch(`${urlAPI}/${id}`, {
+                method: 'DELETE'              
+            });
+
+
+            cargarUsuarios();
+            bootstrap.Modal.getInstance(document.getElementById('modalEliminar')).hide();
+            eventos.target.reset();
+        }
+
+    </script>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
