@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Tatuaje Moto Parts</title>
+    <title>Tatuaje Moto Parts - Servicios</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,15 +23,15 @@
                     </button>
                 </div>
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                    <a href="#" class="text-white text-xl font-bold">Servicios</a>
+                    <a href="index.html" class="text-white text-xl font-bold">TMP</a>
                 </div>
                 <div class="flex items-center space-x-4">
                     <a href="index.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
-                    <a href="Servicios.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
+                    <a href="servicios.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
                     <a href="categorias.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Categorias</a>
                     <a href="productos.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Productos</a>
                     <a href="motos.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Motos</a>
-                    <a href="servicios.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
+                    <a href="usuarios.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Usuarios</a>
                     <a href="citas.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Citas</a>
                     <a href="pedidos.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Pedidos</a>
                     <a href="facturas.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Facturas</a>
@@ -50,34 +50,36 @@
                     <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="nombre" id="nombre" placeholder="Nombre"  />
                 </div>
                 <div>
-                    <label for="apellido" class="block text-sm font-medium text-gray-700">Descripcion</label>
+                    <label for="descripcion" class="block text-sm font-medium text-gray-700">Descripcion</label>
                     <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="descripcion" id="descripcion" placeholder="Descripcion" />
                 </div>
                 <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Precio</label>
-                    <input required type="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="precio" id="precio" placeholder="Precio" />
+                    <label for="precio" class="block text-sm font-medium text-gray-700">Precio</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="precio" id="precio" placeholder="Precio" />
                 </div>
                 <div>
-                    <label for="telefono" class="block text-sm font-medium text-gray-700">Duracion Estimada</label>
+                    <label for="duracion_estimada" class="block text-sm font-medium text-gray-700">Duracion Estimada</label>
                     <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="duracion_estimada" id="duracion_estimada" placeholder="Duracion Estimada" />
                 </div>
                 <div>
-                    <label for="direccion" class="block text-sm font-medium text-gray-700">Categoria</label>
+                    <label for="categoria" class="block text-sm font-medium text-gray-700">Categoria</label>
                     <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="categoria" id="categoria" placeholder="Categoria" />
                 </div>
                 <div>
-                    <label for="fecha_registro" class="block text-sm font-medium text-gray-700">Empleado</label>
-                    <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="empleado" id="empleado" placeholder="Empleado"  />
+                    <label for="empleado" class="block text-sm font-medium text-gray-700">Empleado</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="empleado" id="empleado" placeholder="Empleado"  />
                 </div>
                 <div class="flex space-x-4">
                     <button type="reset" class="bg-red-500 text-white px-4 py-2 rounded-md">Limpiar</button>
                     <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Crear</button>
+                    <button onclick="mostrarTabla()" class="bg-green-600 text-white px-4 py-2 rounded-md">Mostrar Tabla</button>
+                    <button onclick="ocultarTabla()" class="bg-yellow-600 text-white px-4 py-2 rounded-md">Ocultar Tabla</button>
                 </div>
             </div>
         </form>
     </div>
 
-    <div class="container mx-auto mt-6 px-4">
+    <div class="container mx-auto mt-6 px-4 hidden" id="contenedorTabla" >
         <div class="overflow-x-auto">
             <table class="min-w-full bg-white border border-gray-300">
                 <thead>
@@ -112,23 +114,23 @@
                         <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="nombreeditar" name="nombreeditar" />
                     </div>
                     <div>
-                        <label for="apellidoeditar" class="block text-sm font-medium text-gray-700">Descripcion</label>
+                        <label for="descripcioneditar" class="block text-sm font-medium text-gray-700">Descripcion</label>
                         <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="descripcioneditar" name="descripcioneditar" />
                     </div>
                     <div>
-                        <label for="emaileditar" class="block text-sm font-medium text-gray-700">Precio</label>
-                        <input required type="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="precioeditar" name="precioeditar" />
+                        <label for="precioeditar" class="block text-sm font-medium text-gray-700">Precio</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="precioeditar" name="precioeditar" />
                     </div>
                     <div>
-                        <label for="telefonoeditar" class="block text-sm font-medium text-gray-700">Duracion Estimada</label>
+                        <label for="duracion_estimadaeditar" class="block text-sm font-medium text-gray-700">Duracion Estimada</label>
                         <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="duracion_estimadaeditar" name="duracion_estimadaeditar" />
                     </div>
                     <div>
-                        <label for="direccioneditar" class="block text-sm font-medium text-gray-700">Categoria</label>
+                        <label for="categoriaeditar" class="block text-sm font-medium text-gray-700">Categoria</label>
                         <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="categoriaeditar" name="categoriaeditar" />
                     </div>
                     <div>
-                        <label for="fecha_registroeditar" class="block text-sm font-medium text-gray-700">Empleado</label>
+                        <label for="empleadoeditar" class="block text-sm font-medium text-gray-700">Empleado</label>
                         <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="empleadoeditar" name="empleadoeditar" />
                     </div>
                     <div class="flex space-x-4">
@@ -164,6 +166,14 @@
     </div>
 
     <script>
+        function mostrarTabla() {
+            document.getElementById('contenedorTabla').classList.remove('hidden');
+            cargarServicios();
+        }
+
+        function ocultarTabla() {
+            document.getElementById('contenedorTabla').classList.add('hidden');
+        }
         const urlAPI = 'http://localhost:8000/servicios';
     
         // Mostrar Servicios
@@ -213,15 +223,15 @@
             eliminarServicios(e);
         });
     
-        // Crear usuario
+        // Crear Servicio
         async function crearServicios(eventos) {
-            const nuevoUsuario = {
+            const nuevoServicio = {
                 nombre: document.getElementById('nombre').value,
-                apellido: document.getElementById('apellido').value,
-                email: document.getElementById('email').value,
-                telefono: document.getElementById('telefono').value,
-                direccion: document.getElementById('direccion').value,
-                fecha_registro: document.getElementById('fecha_registro').value,
+                descripcion: document.getElementById('descripcion').value,
+                precio: document.getElementById('precio').value,
+                duracion_estimada: document.getElementById('duracion_estimada').value,
+                categoria: document.getElementById('categoria').value,
+                empleado: document.getElementById('empleado').value,
             };
     
             const respuesta = await fetch(urlAPI, {
@@ -229,7 +239,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(nuevoUsuario)
+                body: JSON.stringify(nuevoServicio)
             });
     
             cargarServicios();
@@ -237,29 +247,29 @@
         }
     
         // Abrir modal de edición
-        function abriModalEditar(id, nombre, apellido, email, telefono, direccion, fecha_registro) {
+        function abriModalEditar(id, nombre, descripcion, precio, duracion_estimada, categoria, empleado) {
             document.getElementById('ideditar').value = id;
             document.getElementById('nombreeditar').value = nombre;
-            document.getElementById('apellidoeditar').value = apellido;
-            document.getElementById('emaileditar').value = email;
-            document.getElementById('telefonoeditar').value = telefono;
-            document.getElementById('direccioneditar').value = direccion;
-            document.getElementById('fecha_registroeditar').value = fecha_registro;
+            document.getElementById('descripcioneditar').value = descripcion;
+            document.getElementById('precioeditar').value = precio;
+            document.getElementById('duracion_estimadaeditar').value = duracion_estimada;
+            document.getElementById('categoriaeditar').value = categoria;
+            document.getElementById('empleadoeditar').value = empleado;
     
             document.getElementById('modalEditar').classList.remove('hidden');
         }
     
-        // Editar usuario
+        // Editar Servicio
         async function editarServicios(eventos) {
             const id = document.getElementById('ideditar').value;
     
-            const editarUsuario = {
+            const editarServicio = {
                 nombre: document.getElementById('nombreeditar').value,
-                apellido: document.getElementById('apellidoeditar').value,
-                email: document.getElementById('emaileditar').value,
-                telefono: document.getElementById('telefonoeditar').value,
-                direccion: document.getElementById('direccioneditar').value,
-                fecha_registro: document.getElementById('fecha_registroeditar').value
+                descripcion: document.getElementById('descripcioneditar').value,
+                precio: document.getElementById('precioeditar').value,
+                duracion_estimada: document.getElementById('duracion_estimadaeditar').value,
+                categoria: document.getElementById('categoriaeditar').value,
+                empleado: document.getElementById('empleadoeditar').value
             };
     
             const respuesta = await fetch(`${urlAPI}/${id}`, {
@@ -267,7 +277,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(editarUsuario)
+                body: JSON.stringify(editarServicio)
             });
     
             cargarServicios();
@@ -281,7 +291,7 @@
             document.getElementById('modalEliminar').classList.remove('hidden');
         }
     
-        // Eliminar usuario
+        // Eliminar Servicio
         async function eliminarServicios(eventos) {
             const id = document.getElementById('ideliminar').value;
     

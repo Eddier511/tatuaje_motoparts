@@ -23,21 +23,20 @@
                     </button>
                 </div>
                 <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                    <a href="#" class="text-white text-xl font-bold">Empleados</a>
+                    <a href="index.html" class="text-white text-xl font-bold">TMP</a>
                 </div>
                 <div class="flex items-center space-x-4">
                     <a href="index.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
-                    <a href="usuarios.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Usuarios</a>
+                    <a href="servicios.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
                     <a href="categorias.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Categorias</a>
                     <a href="productos.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Productos</a>
                     <a href="motos.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Motos</a>
-                    <a href="servicios.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Servicios</a>
+                    <a href="usuarios.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Usuarios</a>
                     <a href="citas.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Citas</a>
                     <a href="pedidos.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Pedidos</a>
                     <a href="facturas.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Facturas</a>
                     <a href="proveedores.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Proveedores</a>
                     <a href="empleados.html" class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Empleados</a>
-                </div>
             </div>
         </div>
     </nav>
@@ -46,38 +45,48 @@
         <form id="formulariocrear">
             <div class="space-y-4">
                 <div>
-                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre:</label>
                     <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="nombre" id="nombre" placeholder="Nombre"  />
                 </div>
                 <div>
-                    <label for="apellido" class="block text-sm font-medium text-gray-700">Apellido</label>
+                    <label for="apellido" class="block text-sm font-medium text-gray-700">Apellido:</label>
                     <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="apellido" id="apellido" placeholder="Apellido" />
                 </div>
                 <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
                     <input required type="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="email" id="email" placeholder="Email" />
                 </div>
                 <div>
-                    <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
-                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="telefono" id="telefono" placeholder="Teléfono" />
-                </div>
-                <div>
-                    <label for="direccion" class="block text-sm font-medium text-gray-700">Dirección</label>
+                    <label for="direccion" class="block text-sm font-medium text-gray-700">Dirección:</label>
                     <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="direccion" id="direccion" placeholder="Direccion" />
                 </div>
                 <div>
-                    <label for="fecha_registro" class="block text-sm font-medium text-gray-700">Fecha de registro</label>
-                    <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="fecha_registro" id="fecha_registro" placeholder="Fecha"  />
+                    <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="telefono" id="telefono" placeholder="Teléfono" />
+                </div>
+                <div>
+                    <label for="puesto" class="block text-sm font-medium text-gray-700">Puesto:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="puesto" id="puesto" placeholder="Puesto" />
+                </div>
+                <div>
+                    <label for="salario" class="block text-sm font-medium text-gray-700">Salario:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="salario" id="salario" placeholder="Salario"  />
+                </div>
+                <div>
+                    <label for="fecha_contratacion" class="block text-sm font-medium text-gray-700">Fecha de Contratación:</label>
+                    <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="fecha_contratacion" id="fecha_contratacion" placeholder="Fecha de Contratacion"  />
                 </div>
                 <div class="flex space-x-4">
                     <button type="reset" class="bg-red-500 text-white px-4 py-2 rounded-md">Limpiar</button>
                     <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Crear</button>
+                    <button onclick="mostrarTabla()" class="bg-green-600 text-white px-4 py-2 rounded-md">Mostrar Tabla</button>
+                    <button onclick="ocultarTabla()" class="bg-yellow-600 text-white px-4 py-2 rounded-md">Ocultar Tabla</button>
                 </div>
             </div>
         </form>
     </div>
 
-    <div class="container mx-auto mt-6 px-4">
+    <div class="container mx-auto mt-6 px-4 hidden" id="contenedorTabla" >
         <div class="overflow-x-auto">
             <table class="min-w-full bg-white border border-gray-300">
                 <thead>
@@ -86,9 +95,11 @@
                         <th class="px-4 py-2">Nombre</th>
                         <th class="px-4 py-2">Apellido</th>
                         <th class="px-4 py-2">Email</th>
-                        <th class="px-4 py-2">Teléfono</th>
                         <th class="px-4 py-2">Dirección</th>
-                        <th class="px-4 py-2">Fecha Registro</th>
+                        <th class="px-4 py-2">Teléfono</th>
+                        <th class="px-4 py-2">Puesto</th>
+                        <th class="px-4 py-2">Salario</th>
+                        <th class="px-4 py-2">Fecha de Contratación</th>
                         <th class="px-4 py-2">Acciones</th>
                     </tr>
                 </thead>
@@ -108,28 +119,36 @@
                         <input disabled type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="ideditar" name="ideditar" />
                     </div>
                     <div>
-                        <label for="nombreeditar" class="block text-sm font-medium text-gray-700">Nombre</label>
+                        <label for="nombreeditar" class="block text-sm font-medium text-gray-700">Nombre:</label>
                         <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="nombreeditar" name="nombreeditar" />
                     </div>
                     <div>
-                        <label for="apellidoeditar" class="block text-sm font-medium text-gray-700">Apellido</label>
+                        <label for="apellidoeditar" class="block text-sm font-medium text-gray-700">Apellido:</label>
                         <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="apellidoeditar" name="apellidoeditar" />
                     </div>
                     <div>
-                        <label for="emaileditar" class="block text-sm font-medium text-gray-700">Email</label>
+                        <label for="emaileditar" class="block text-sm font-medium text-gray-700">Email:</label>
                         <input required type="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="emaileditar" name="emaileditar" />
                     </div>
                     <div>
-                        <label for="telefonoeditar" class="block text-sm font-medium text-gray-700">Teléfono</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="telefonoeditar" name="telefonoeditar" />
-                    </div>
-                    <div>
-                        <label for="direccioneditar" class="block text-sm font-medium text-gray-700">Dirección</label>
+                        <label for="direccioneditar" class="block text-sm font-medium text-gray-700">Dirección:</label>
                         <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="direccioneditar" name="direccioneditar" />
                     </div>
                     <div>
-                        <label for="fecha_registroeditar" class="block text-sm font-medium text-gray-700">Fecha de registro</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="fecha_registroeditar" name="fecha_registroeditar" />
+                        <label for="telefonoeditar" class="block text-sm font-medium text-gray-700">Teléfono:</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="telefonoeditar" name="telefonoeditar" />
+                    </div>
+                    <div>
+                        <label for="puestoeditar" class="block text-sm font-medium text-gray-700">Puesto:</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="puestoeditar" name="puestoeditar" />
+                    </div>
+                    <div>
+                        <label for="salarioeditar" class="block text-sm font-medium text-gray-700">Salario:</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="salarioeditar" name="salarioeditar" />
+                    </div>
+                    <div>
+                        <label for="fecha_contratacioneditar" class="block text-sm font-medium text-gray-700">Fecha de Contratación:</label>
+                        <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="fecha_contratacioneditar" name="fecha_contratacioneditar" />
                     </div>
                     <div class="flex space-x-4">
                         <button type="reset" class="bg-red-500 text-white px-4 py-2 rounded-md">Limpiar</button>
@@ -164,10 +183,19 @@
     </div>
 
     <script>
-        const urlAPI = 'http://localhost:8000/usuarios';
+        function mostrarTabla() {
+            document.getElementById('contenedorTabla').classList.remove('hidden');
+            cargarServicios();
+        }
+
+        function ocultarTabla() {
+            document.getElementById('contenedorTabla').classList.add('hidden');
+        }
+
+        const urlAPI = 'http://localhost:8000/empleados';
     
-        // Mostrar usuarios
-        async function cargarUsuarios() {
+        // Mostrar Empleados
+        async function cargarEmpleados() {
             const respuesta = await fetch(urlAPI);
             const datos = await respuesta.json();
     
@@ -181,12 +209,14 @@
                         <td class="px-4 py-2 border-b text-center">${element.nombre}</td>
                         <td class="px-4 py-2 border-b text-center">${element.apellido}</td>
                         <td class="px-4 py-2 border-b text-center">${element.email}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.telefono}</td>                            
                         <td class="px-4 py-2 border-b text-center">${element.direccion}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.fecha_registro}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.telefono}</td>                            
+                        <td class="px-4 py-2 border-b text-center">${element.puesto}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.salario}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.fecha_contratacion}</td>
                         <td class="px-4 py-2 border-b text-center">
                             <button class="bg-red-500 text-white px-4 py-2 rounded-md" onclick="abriModalEliminar('${element._id}')">Eliminar</button>
-                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md ml-2" onclick="abriModalEditar('${element._id}', '${element.nombre}', '${element.apellido}', '${element.email}', '${element.telefono}', '${element.direccion}', '${element.fecha_registro}')">Editar</button>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md ml-2" onclick="abriModalEditar('${element._id}', '${element.nombre}', '${element.apellido}', '${element.email}', '${element.direccion}','${element.telefono}','${element.puesto}','${element.salario}','${element.fecha_contratacion}')">Editar</button>
                         </td>
                     </tr>
                 `;
@@ -196,32 +226,34 @@
             console.log(datos);
         }
     
-        cargarUsuarios();
+        cargarEmpleados();
     
         document.getElementById('formulariocrear').addEventListener('submit', async (e) => {
             e.preventDefault();
-            crearUsuarios(e);
+            crearEmpleados(e);
         });
     
         document.getElementById('formularioeditar').addEventListener('submit', async (e) => {
             e.preventDefault();
-            editarUsuarios(e);
+            editarEmpleados(e);
         });
     
         document.getElementById('formularioeliminar').addEventListener('submit', async (e) => {
             e.preventDefault();
-            eliminarUsuarios(e);
+            eliminarEmpleados(e);
         });
     
-        // Crear usuario
-        async function crearUsuarios(eventos) {
-            const nuevoUsuario = {
+        // Crear Empleado
+        async function crearEmpleados(eventos) {
+            const nuevoEmpleado = {
                 nombre: document.getElementById('nombre').value,
                 apellido: document.getElementById('apellido').value,
                 email: document.getElementById('email').value,
-                telefono: document.getElementById('telefono').value,
                 direccion: document.getElementById('direccion').value,
-                fecha_registro: document.getElementById('fecha_registro').value,
+                telefono: document.getElementById('telefono').value,
+                puesto: document.getElementById('puesto').value,
+                salario: document.getElementById('salario').value,
+                fecha_contratacion: document.getElementById('fecha_contratacion').value,
             };
     
             const respuesta = await fetch(urlAPI, {
@@ -229,37 +261,41 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(nuevoUsuario)
+                body: JSON.stringify(nuevoEmpleado)
             });
     
-            cargarUsuarios();
+            cargarEmpleados();
             eventos.target.reset();
         }
     
         // Abrir modal de edición
-        function abriModalEditar(id, nombre, apellido, email, telefono, direccion, fecha_registro) {
+        function abriModalEditar(id, nombre, apellido, email, direccion, telefono, puesto, salario, fecha_contratacion) {
             document.getElementById('ideditar').value = id;
             document.getElementById('nombreeditar').value = nombre;
             document.getElementById('apellidoeditar').value = apellido;
             document.getElementById('emaileditar').value = email;
-            document.getElementById('telefonoeditar').value = telefono;
             document.getElementById('direccioneditar').value = direccion;
-            document.getElementById('fecha_registroeditar').value = fecha_registro;
+            document.getElementById('telefonoeditar').value = telefono;
+            document.getElementById('puestoeditar').value = puesto;
+            document.getElementById('salarioeditar').value = salario;
+            document.getElementById('fecha_contratacioneditar').value = fecha_contratacion;
     
             document.getElementById('modalEditar').classList.remove('hidden');
         }
     
-        // Editar usuario
-        async function editarUsuarios(eventos) {
+        // Editar Empleado
+        async function editarEmpleados(eventos) {
             const id = document.getElementById('ideditar').value;
     
-            const editarUsuario = {
+            const editarEmpleado = {
                 nombre: document.getElementById('nombreeditar').value,
                 apellido: document.getElementById('apellidoeditar').value,
                 email: document.getElementById('emaileditar').value,
-                telefono: document.getElementById('telefonoeditar').value,
                 direccion: document.getElementById('direccioneditar').value,
-                fecha_registro: document.getElementById('fecha_registroeditar').value
+                telefono: document.getElementById('telefonoeditar').value,
+                puesto: document.getElementById('puestoeditar').value,
+                salario: document.getElementById('salarioeditar').value,
+                fecha_contratacion: document.getElementById('fecha_contratacioneditar').value
             };
     
             const respuesta = await fetch(`${urlAPI}/${id}`, {
@@ -267,10 +303,10 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(editarUsuario)
+                body: JSON.stringify(editarEmpleado)
             });
     
-            cargarUsuarios();
+            cargarEmpleados();
             document.getElementById('modalEditar').classList.add('hidden');
             eventos.target.reset();
         }
@@ -281,15 +317,15 @@
             document.getElementById('modalEliminar').classList.remove('hidden');
         }
     
-        // Eliminar usuario
-        async function eliminarUsuarios(eventos) {
+        // Eliminar Empleado
+        async function eliminarEmpleados(eventos) {
             const id = document.getElementById('ideliminar').value;
     
             const respuesta = await fetch(`${urlAPI}/${id}`, {
                 method: 'DELETE'              
             });
     
-            cargarUsuarios();
+            cargarEmpleados();
             document.getElementById('modalEliminar').classList.add('hidden');
             eventos.target.reset();
         }
