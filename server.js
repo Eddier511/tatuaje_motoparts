@@ -1,17 +1,28 @@
 //Esto es el archivo de ajustes para el servidor 
+const path = require('path');
 require("dotenv").config();
 
 //Invocando librerias
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const nombreControlador = "/usuarios";
+const usuarioRouters = require("./routers/usuarioRoutes");
+const motoRouters = require("./routers/motoRoutes");
+const serviciosRouters = require("./routers/serviciosRoutes");
+const proveedorRouters = require("./routers/proveedorRoutes");
+const pedidoRouters = require("./routers/pedidoRoutes");
+const citaRouters = require("./routers/citaRoutes");
+const facturaRouters = require("./routers/facturaRoutes");
+const productoRouters = require("./routers/productoRoutes");
+const empleadoRouters = require("./routers/empleadoRoutes");
+const categoriaRouters = require("./routers/categoriaRoutes");
 // 
 const app = express();
 
 //Middleware esto es para el req y respon
 app.use(express.json());
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Obtener el string de conexion env
 const mongoURi = process.env.MONGO_URI;
@@ -21,78 +32,16 @@ mongoose.connect(mongoURi)
 .then( ()=> console.log("Conectado"))
 .catch( err => console.error("Error al conectar:", err));
 
-//Crear nuestros esquemas, entidad, 
-
-//Modelo de datos usuario
-const UsuarioSchema = new mongoose.Schema(
-    {
-        nombre: String,
-        email: String,
-        direccion: String,
-        telefono: String
-    }
-)
-//Modelo de datos conectado al mongodb(conexion al schema de Usuarios)
-const modeloUsuario = mongoose.model("Usuario", UsuarioSchema);
-
-//rutas del crud
-app.post(nombreControlador, async (req, res)=>{
-        try {
-            const _datos = new modeloUsuario ( req.body );
-            await _datos.save();
-            res.status(201).json(_datos);
-        } catch (error) {
-            res.status(500).json( {
-                error: "Error al crear"
-            });
-        }
-    }
-)
-
-//get obtener los datos
-
-app.get(nombreControlador, async (req, res)=>{
-    try {
-        const _datos = await modeloUsuario.find();
-        res.status(201).json(_datos);
-    } catch (error) {
-        res.status(500).json( {
-            error: "Error al obtener los usuarios"
-        });
-    }
-}
-)
-
-
-
-//Put
-app.put(nombreControlador + "/:id", async (req, res)=>{
-    try {
-     
-        const _datos = await modeloUsuario.findByIdAndUpdate(req.params.id, req.body, {new: true} );
-        res.status(200).json(_datos);
-    } catch (error) {
-        res.status(500).json( {
-            error: "Error al actualizar los datos"
-        });
-    }
-}
-)
-
-//Delete
-app.delete(nombreControlador + "/:id", async (req, res)=>{
-    try {
-     
-        const _datos = await modeloUsuario.findByIdAndDelete(req.params.id);
-        res.status(200).json("Datos eliminados");
-    } catch (error) {
-        res.status(500).json( {
-            error: "Error al eliminar los datos"
-        });
-    }
-}
-)
-//get, post, delete put
+app.use("/usuarios", usuarioRouters);
+app.use("/motos", motoRouters);
+app.use("/servicios", serviciosRouters);
+app.use("/proveedores", proveedorRouters);
+app.use("/pedidos", pedidoRouters);
+app.use("/citas", citaRouters);
+app.use("/facturas", facturaRouters);
+app.use("/productos", productoRouters);
+app.use("/empleados", empleadoRouters);
+app.use("/categorias", categoriaRouters);
 
 
 //Inciar el servidor

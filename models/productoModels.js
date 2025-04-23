@@ -8,7 +8,7 @@ const ProductoSchema = new mongoose.Schema(
         categoria: String,
         proveedor: String,
         precio: String,
-        fecha_ingreso: String
+        fecha_registro: String
     }
 );
 

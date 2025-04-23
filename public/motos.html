@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Tatuaje Moto Parts</title>
+    <title>Tatuaje Moto Parts - Motos</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -46,28 +46,36 @@
         <form id="formulariocrear">
             <div class="space-y-4">
                 <div>
-                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
-                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="nombre" id="nombre" placeholder="Nombre"  />
+                    <label for="marca" class="block text-sm font-medium text-gray-700">Marca:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="marca" id="marca" placeholder="Marca"  />
                 </div>
                 <div>
-                    <label for="apellido" class="block text-sm font-medium text-gray-700">Apellido</label>
-                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="apellido" id="apellido" placeholder="Apellido" />
+                    <label for="modelo" class="block text-sm font-medium text-gray-700">Modelo:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="modelo" id="modelo" placeholder="modelo" />
                 </div>
                 <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input required type="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="email" id="email" placeholder="Email" />
+                    <label for="cilindraje" class="block text-sm font-medium text-gray-700">Cilindraje:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="cilindraje" id="cilindraje" placeholder="Cilindraje" />
                 </div>
                 <div>
-                    <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
-                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="telefono" id="telefono" placeholder="Teléfono" />
+                    <label for="anio" class="block text-sm font-medium text-gray-700">Año:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="anio" id="anio" placeholder="Año" />
                 </div>
                 <div>
-                    <label for="direccion" class="block text-sm font-medium text-gray-700">Dirección</label>
-                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="direccion" id="direccion" placeholder="Direccion" />
+                    <label for="precio" class="block text-sm font-medium text-gray-700">Precio:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="precio" id="precio" placeholder="Precio" />
                 </div>
                 <div>
-                    <label for="fecha_registro" class="block text-sm font-medium text-gray-700">Fecha de registro</label>
-                    <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="fecha_registro" id="fecha_registro" placeholder="Fecha"  />
+                    <label for="color" class="block text-sm font-medium text-gray-700">Color:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="color" id="color" placeholder="Color"  />
+                </div>
+                <div>
+                    <label for="proveedor" class="block text-sm font-medium text-gray-700">Proveedor:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="proveedor" id="proveedor" placeholder="Proveedor"  />
+                </div>
+                <div>
+                    <label for="fecha_ingreso" class="block text-sm font-medium text-gray-700">Fecha de Ingreso:</label>
+                    <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="fecha_ingreso" id="fecha_ingreso" placeholder="Fecha de Ingreso"  />
                 </div>
                 <div class="flex space-x-4">
                     <button type="reset" class="bg-red-500 text-white px-4 py-2 rounded-md">Limpiar</button>
@@ -85,12 +93,14 @@
                 <thead>
                     <tr class="bg-gray-800 text-white">
                         <th class="px-4 py-2">Id</th>
-                        <th class="px-4 py-2">Nombre</th>
-                        <th class="px-4 py-2">Apellido</th>
-                        <th class="px-4 py-2">Email</th>
-                        <th class="px-4 py-2">Teléfono</th>
-                        <th class="px-4 py-2">Dirección</th>
-                        <th class="px-4 py-2">Fecha Registro</th>
+                        <th class="px-4 py-2">Marca</th>
+                        <th class="px-4 py-2">Modelo</th>
+                        <th class="px-4 py-2">Cilindraje</th>
+                        <th class="px-4 py-2">Año</th>
+                        <th class="px-4 py-2">Precio</th>
+                        <th class="px-4 py-2">Color</th>
+                        <th class="px-4 py-2">Proveedor</th>
+                        <th class="px-4 py-2">Fecha de Ingreso</th>
                         <th class="px-4 py-2">Acciones</th>
                     </tr>
                 </thead>
@@ -110,28 +120,36 @@
                         <input disabled type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="ideditar" name="ideditar" />
                     </div>
                     <div>
-                        <label for="nombreeditar" class="block text-sm font-medium text-gray-700">Nombre</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="nombreeditar" name="nombreeditar" />
+                        <label for="marcaeditar" class="block text-sm font-medium text-gray-700">Marca</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="marcaeditar" name="marcaeditar" />
                     </div>
                     <div>
-                        <label for="apellidoeditar" class="block text-sm font-medium text-gray-700">Apellido</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="apellidoeditar" name="apellidoeditar" />
+                        <label for="modeloeditar" class="block text-sm font-medium text-gray-700">Modelo</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="modeloeditar" name="modeloeditar" />
                     </div>
                     <div>
-                        <label for="emaileditar" class="block text-sm font-medium text-gray-700">Email</label>
-                        <input required type="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="emaileditar" name="emaileditar" />
+                        <label for="cilindrajeeditar" class="block text-sm font-medium text-gray-700">Cilindraje</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="cilindrajeeditar" name="cilindrajeeditar" />
                     </div>
                     <div>
-                        <label for="telefonoeditar" class="block text-sm font-medium text-gray-700">Teléfono</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="telefonoeditar" name="telefonoeditar" />
+                        <label for="anioeditar" class="block text-sm font-medium text-gray-700">Año</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="anioeditar" name="anioeditar" />
                     </div>
                     <div>
-                        <label for="direccioneditar" class="block text-sm font-medium text-gray-700">Dirección</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="direccioneditar" name="direccioneditar" />
+                        <label for="precioeditar" class="block text-sm font-medium text-gray-700">Precio</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="precioeditar" name="precioeditar" />
                     </div>
                     <div>
-                        <label for="fecha_registroeditar" class="block text-sm font-medium text-gray-700">Fecha de registro</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="fecha_registroeditar" name="fecha_registroeditar" />
+                        <label for="coloreditar" class="block text-sm font-medium text-gray-700">Color</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="coloreditar" name="coloreditar" />
+                    </div>
+                    <div>
+                        <label for="proveedoreditar" class="block text-sm font-medium text-gray-700">Proveedor</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="proveedoreditar" name="proveedoreditar" />
+                    </div>
+                    <div>
+                        <label for="fecha_ingresoeditar" class="block text-sm font-medium text-gray-700">Fecha de Ingreso</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="fecha_ingresoeditar" name="fecha_ingresoeditar" />
                     </div>
                     <div class="flex space-x-4">
                         <button type="reset" class="bg-red-500 text-white px-4 py-2 rounded-md">Limpiar</button>
@@ -175,10 +193,10 @@
             document.getElementById('contenedorTabla').classList.add('hidden');
         }
 
-        const urlAPI = 'http://localhost:8000/usuarios';
+        const urlAPI = 'http://localhost:8000/motos';
     
-        // Mostrar usuarios
-        async function cargarUsuarios() {
+        // Mostrar Motos
+        async function cargarMotos() {
             const respuesta = await fetch(urlAPI);
             const datos = await respuesta.json();
     
@@ -189,15 +207,17 @@
                 const fila = `
                     <tr>
                         <td class="px-4 py-2 border-b text-center">${element._id}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.nombre}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.apellido}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.email}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.telefono}</td>                            
-                        <td class="px-4 py-2 border-b text-center">${element.direccion}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.fecha_registro}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.marca}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.modelo}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.cilindraje}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.anio}</td>                            
+                        <td class="px-4 py-2 border-b text-center">${element.precio}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.color}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.proveedor}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.fecha_ingreso}</td>
                         <td class="px-4 py-2 border-b text-center">
                             <button class="bg-red-500 text-white px-4 py-2 rounded-md" onclick="abriModalEliminar('${element._id}')">Eliminar</button>
-                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md ml-2" onclick="abriModalEditar('${element._id}', '${element.nombre}', '${element.apellido}', '${element.email}', '${element.telefono}', '${element.direccion}', '${element.fecha_registro}')">Editar</button>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md ml-2" onclick="abriModalEditar('${element._id}', '${element.marca}', '${element.modelo}', '${element.cilindraje}', '${element.anio}', '${element.precio}', '${element.color}', '${element.proveedor}', '${element.fecha_ingreso}')">Editar</button>
                         </td>
                     </tr>
                 `;
@@ -207,32 +227,34 @@
             console.log(datos);
         }
     
-        cargarUsuarios();
+        cargarMotos();
     
         document.getElementById('formulariocrear').addEventListener('submit', async (e) => {
             e.preventDefault();
-            crearUsuarios(e);
+            crearMotos(e);
         });
     
         document.getElementById('formularioeditar').addEventListener('submit', async (e) => {
             e.preventDefault();
-            editarUsuarios(e);
+            editarMotos(e);
         });
     
         document.getElementById('formularioeliminar').addEventListener('submit', async (e) => {
             e.preventDefault();
-            eliminarUsuarios(e);
+            eliminarMotos(e);
         });
     
-        // Crear usuario
-        async function crearUsuarios(eventos) {
-            const nuevoUsuario = {
-                nombre: document.getElementById('nombre').value,
-                apellido: document.getElementById('apellido').value,
-                email: document.getElementById('email').value,
-                telefono: document.getElementById('telefono').value,
-                direccion: document.getElementById('direccion').value,
-                fecha_registro: document.getElementById('fecha_registro').value,
+        // Crear Moto
+        async function crearMotos(eventos) {
+            const nuevaMoto = {
+                marca: document.getElementById('marca').value,
+                modelo: document.getElementById('modelo').value,
+                cilindraje: document.getElementById('cilindraje').value,
+                anio: document.getElementById('anio').value,
+                precio: document.getElementById('precio').value,
+                color: document.getElementById('color').value,
+                proveedor: document.getElementById('proveedor').value,
+                fecha_ingreso: document.getElementById('fecha_ingreso').value,
             };
     
             const respuesta = await fetch(urlAPI, {
@@ -240,37 +262,41 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(nuevoUsuario)
+                body: JSON.stringify(nuevaMoto)
             });
     
-            cargarUsuarios();
+            cargarMotos();
             eventos.target.reset();
         }
     
         // Abrir modal de edición
-        function abriModalEditar(id, nombre, apellido, email, telefono, direccion, fecha_registro) {
+        function abriModalEditar(id, marca, modelo, cilindraje, anio, precio, color, proveedor, fecha_ingreso) {
             document.getElementById('ideditar').value = id;
-            document.getElementById('nombreeditar').value = nombre;
-            document.getElementById('apellidoeditar').value = apellido;
-            document.getElementById('emaileditar').value = email;
-            document.getElementById('telefonoeditar').value = telefono;
-            document.getElementById('direccioneditar').value = direccion;
-            document.getElementById('fecha_registroeditar').value = fecha_registro;
+            document.getElementById('marcaeditar').value = marca;
+            document.getElementById('modeloeditar').value = modelo;
+            document.getElementById('cilindrajeeditar').value = cilindraje;
+            document.getElementById('anioeditar').value = anio;
+            document.getElementById('precioeditar').value = precio;
+            document.getElementById('coloreditar').value = color;
+            document.getElementById('proveedoreditar').value = proveedor;
+            document.getElementById('fecha_ingresoeditar').value = fecha_ingreso;
     
             document.getElementById('modalEditar').classList.remove('hidden');
         }
     
-        // Editar usuario
-        async function editarUsuarios(eventos) {
+        // Editar Moto
+        async function editarMotos(eventos) {
             const id = document.getElementById('ideditar').value;
     
-            const editarUsuario = {
-                nombre: document.getElementById('nombreeditar').value,
-                apellido: document.getElementById('apellidoeditar').value,
-                email: document.getElementById('emaileditar').value,
-                telefono: document.getElementById('telefonoeditar').value,
-                direccion: document.getElementById('direccioneditar').value,
-                fecha_registro: document.getElementById('fecha_registroeditar').value
+            const editarMoto = {
+                marca: document.getElementById('marcaeditar').value,
+                modelo: document.getElementById('modeloeditar').value,
+                cilindraje: document.getElementById('cilindrajeeditar').value,
+                anio: document.getElementById('anioeditar').value,
+                precio: document.getElementById('precioeditar').value,
+                color: document.getElementById('coloreditar').value,
+                proveedor: document.getElementById('proveedoreditar').value,
+                fecha_ingreso: document.getElementById('fecha_ingresoeditar').value
             };
     
             const respuesta = await fetch(`${urlAPI}/${id}`, {
@@ -278,10 +304,10 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(editarUsuario)
+                body: JSON.stringify(editarMoto)
             });
     
-            cargarUsuarios();
+            cargarMotos();
             document.getElementById('modalEditar').classList.add('hidden');
             eventos.target.reset();
         }
@@ -292,15 +318,15 @@
             document.getElementById('modalEliminar').classList.remove('hidden');
         }
     
-        // Eliminar usuario
-        async function eliminarUsuarios(eventos) {
+        // Eliminar Moto
+        async function eliminarMotos(eventos) {
             const id = document.getElementById('ideliminar').value;
     
             const respuesta = await fetch(`${urlAPI}/${id}`, {
                 method: 'DELETE'              
             });
     
-            cargarUsuarios();
+            cargarMotos();
             document.getElementById('modalEliminar').classList.add('hidden');
             eventos.target.reset();
         }

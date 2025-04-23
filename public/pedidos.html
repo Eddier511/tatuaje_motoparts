@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Tatuaje Moto Parts</title>
+    <title>Tatuaje Moto Parts - Pedidos</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -46,28 +46,24 @@
         <form id="formulariocrear">
             <div class="space-y-4">
                 <div>
-                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre:</label>
                     <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="nombre" id="nombre" placeholder="Nombre"  />
                 </div>
                 <div>
-                    <label for="apellido" class="block text-sm font-medium text-gray-700">Apellido</label>
-                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="apellido" id="apellido" placeholder="Apellido" />
+                    <label for="fecha_pedido" class="block text-sm font-medium text-gray-700">Fecha del Pedido:</label>
+                    <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="fecha_pedido" id="fecha_pedido" placeholder="Fecha del Pedido" />
                 </div>
                 <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input required type="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="email" id="email" placeholder="Email" />
+                    <label for="estado" class="block text-sm font-medium text-gray-700">Estado:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="estado" id="estado" placeholder="Estado" />
                 </div>
                 <div>
-                    <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
-                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="telefono" id="telefono" placeholder="Teléfono" />
+                    <label for="total" class="block text-sm font-medium text-gray-700">Total:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="total" id="total" placeholder="Total" />
                 </div>
                 <div>
-                    <label for="direccion" class="block text-sm font-medium text-gray-700">Dirección</label>
-                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="direccion" id="direccion" placeholder="Direccion" />
-                </div>
-                <div>
-                    <label for="fecha_registro" class="block text-sm font-medium text-gray-700">Fecha de registro</label>
-                    <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="fecha_registro" id="fecha_registro" placeholder="Fecha"  />
+                    <label for="direccion_envio" class="block text-sm font-medium text-gray-700">Dirección de Envio:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="direccion_envio" id="direccion_envio" placeholder="Direccion de Envio" />
                 </div>
                 <div class="flex space-x-4">
                     <button type="reset" class="bg-red-500 text-white px-4 py-2 rounded-md">Limpiar</button>
@@ -86,11 +82,10 @@
                     <tr class="bg-gray-800 text-white">
                         <th class="px-4 py-2">Id</th>
                         <th class="px-4 py-2">Nombre</th>
-                        <th class="px-4 py-2">Apellido</th>
-                        <th class="px-4 py-2">Email</th>
-                        <th class="px-4 py-2">Teléfono</th>
-                        <th class="px-4 py-2">Dirección</th>
-                        <th class="px-4 py-2">Fecha Registro</th>
+                        <th class="px-4 py-2">Fecha del Pedido</th>
+                        <th class="px-4 py-2">Estado</th>
+                        <th class="px-4 py-2">Total</th>
+                        <th class="px-4 py-2">Dirección de Envio</th>
                         <th class="px-4 py-2">Acciones</th>
                     </tr>
                 </thead>
@@ -114,24 +109,20 @@
                         <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="nombreeditar" name="nombreeditar" />
                     </div>
                     <div>
-                        <label for="apellidoeditar" class="block text-sm font-medium text-gray-700">Apellido</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="apellidoeditar" name="apellidoeditar" />
+                        <label for="fecha_pedidoeditar" class="block text-sm font-medium text-gray-700">Fecha del Pedido</label>
+                        <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="fecha_pedidoeditar" name="fecha_pedidoeditar" />
                     </div>
                     <div>
-                        <label for="emaileditar" class="block text-sm font-medium text-gray-700">Email</label>
-                        <input required type="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="emaileditar" name="emaileditar" />
+                        <label for="estadoeditar" class="block text-sm font-medium text-gray-700">Estado</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="estadoeditar" name="estadoeditar" />
                     </div>
                     <div>
-                        <label for="telefonoeditar" class="block text-sm font-medium text-gray-700">Teléfono</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="telefonoeditar" name="telefonoeditar" />
+                        <label for="totaleditar" class="block text-sm font-medium text-gray-700">Total</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="totaleditar" name="totaleditar" />
                     </div>
                     <div>
-                        <label for="direccioneditar" class="block text-sm font-medium text-gray-700">Dirección</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="direccioneditar" name="direccioneditar" />
-                    </div>
-                    <div>
-                        <label for="fecha_registroeditar" class="block text-sm font-medium text-gray-700">Fecha de registro</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="fecha_registroeditar" name="fecha_registroeditar" />
+                        <label for="direccion_envioeditar" class="block text-sm font-medium text-gray-700">Dirección de Envio</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="direccion_envioeditar" name="direccion_envioeditar" />
                     </div>
                     <div class="flex space-x-4">
                         <button type="reset" class="bg-red-500 text-white px-4 py-2 rounded-md">Limpiar</button>
@@ -175,10 +166,10 @@
             document.getElementById('contenedorTabla').classList.add('hidden');
         }
 
-        const urlAPI = 'http://localhost:8000/usuarios';
+        const urlAPI = 'http://localhost:8000/pedidos';
     
-        // Mostrar usuarios
-        async function cargarUsuarios() {
+        // Mostrar Pedidos
+        async function cargarPedidos() {
             const respuesta = await fetch(urlAPI);
             const datos = await respuesta.json();
     
@@ -190,14 +181,13 @@
                     <tr>
                         <td class="px-4 py-2 border-b text-center">${element._id}</td>
                         <td class="px-4 py-2 border-b text-center">${element.nombre}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.apellido}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.email}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.telefono}</td>                            
-                        <td class="px-4 py-2 border-b text-center">${element.direccion}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.fecha_registro}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.fecha_pedido}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.estado}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.total}</td>                            
+                        <td class="px-4 py-2 border-b text-center">${element.direccion_envio}</td>
                         <td class="px-4 py-2 border-b text-center">
                             <button class="bg-red-500 text-white px-4 py-2 rounded-md" onclick="abriModalEliminar('${element._id}')">Eliminar</button>
-                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md ml-2" onclick="abriModalEditar('${element._id}', '${element.nombre}', '${element.apellido}', '${element.email}', '${element.telefono}', '${element.direccion}', '${element.fecha_registro}')">Editar</button>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md ml-2" onclick="abriModalEditar('${element._id}', '${element.nombre}', '${element.fecha_pedido}', '${element.estado}', '${element.total}', '${element.direccion_envio}')">Editar</button>
                         </td>
                     </tr>
                 `;
@@ -207,32 +197,31 @@
             console.log(datos);
         }
     
-        cargarUsuarios();
+        cargarPedidos();
     
         document.getElementById('formulariocrear').addEventListener('submit', async (e) => {
             e.preventDefault();
-            crearUsuarios(e);
+            crearPedidos(e);
         });
     
         document.getElementById('formularioeditar').addEventListener('submit', async (e) => {
             e.preventDefault();
-            editarUsuarios(e);
+            editarPedidos(e);
         });
     
         document.getElementById('formularioeliminar').addEventListener('submit', async (e) => {
             e.preventDefault();
-            eliminarUsuarios(e);
+            eliminarPedidos(e);
         });
     
-        // Crear usuario
-        async function crearUsuarios(eventos) {
-            const nuevoUsuario = {
+        // Crear Pedido
+        async function crearPedidos(eventos) {
+            const nuevoPedido = {
                 nombre: document.getElementById('nombre').value,
-                apellido: document.getElementById('apellido').value,
-                email: document.getElementById('email').value,
-                telefono: document.getElementById('telefono').value,
-                direccion: document.getElementById('direccion').value,
-                fecha_registro: document.getElementById('fecha_registro').value,
+                fecha_pedido: document.getElementById('fecha_pedido').value,
+                estado: document.getElementById('estado').value,
+                total: document.getElementById('total').value,
+                direccion_envio: document.getElementById('direccion_envio').value,
             };
     
             const respuesta = await fetch(urlAPI, {
@@ -240,37 +229,35 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(nuevoUsuario)
+                body: JSON.stringify(nuevoPedido)
             });
     
-            cargarUsuarios();
+            cargarPedidos();
             eventos.target.reset();
         }
     
         // Abrir modal de edición
-        function abriModalEditar(id, nombre, apellido, email, telefono, direccion, fecha_registro) {
+        function abriModalEditar(id, nombre, fecha_pedido, estado, total, direccion_envio) {
             document.getElementById('ideditar').value = id;
             document.getElementById('nombreeditar').value = nombre;
-            document.getElementById('apellidoeditar').value = apellido;
-            document.getElementById('emaileditar').value = email;
-            document.getElementById('telefonoeditar').value = telefono;
-            document.getElementById('direccioneditar').value = direccion;
-            document.getElementById('fecha_registroeditar').value = fecha_registro;
+            document.getElementById('fecha_pedidoeditar').value = fecha_pedido;
+            document.getElementById('estadoeditar').value = estado;
+            document.getElementById('totaleditar').value = total;
+            document.getElementById('direccion_envioeditar').value = direccion_envio;
     
             document.getElementById('modalEditar').classList.remove('hidden');
         }
     
-        // Editar usuario
-        async function editarUsuarios(eventos) {
+        // Editar Pedido
+        async function editarPedidos(eventos) {
             const id = document.getElementById('ideditar').value;
     
-            const editarUsuario = {
+            const editarPedido = {
                 nombre: document.getElementById('nombreeditar').value,
-                apellido: document.getElementById('apellidoeditar').value,
-                email: document.getElementById('emaileditar').value,
-                telefono: document.getElementById('telefonoeditar').value,
-                direccion: document.getElementById('direccioneditar').value,
-                fecha_registro: document.getElementById('fecha_registroeditar').value
+                fecha_pedido: document.getElementById('fecha_pedidoeditar').value,
+                estado: document.getElementById('estadoeditar').value,
+                total: document.getElementById('totaleditar').value,
+                direccion_envio: document.getElementById('direccion_envioeditar').value
             };
     
             const respuesta = await fetch(`${urlAPI}/${id}`, {
@@ -278,10 +265,10 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(editarUsuario)
+                body: JSON.stringify(editarPedido)
             });
     
-            cargarUsuarios();
+            cargarPedidos();
             document.getElementById('modalEditar').classList.add('hidden');
             eventos.target.reset();
         }
@@ -292,15 +279,15 @@
             document.getElementById('modalEliminar').classList.remove('hidden');
         }
     
-        // Eliminar usuario
-        async function eliminarUsuarios(eventos) {
+        // Eliminar Pedido
+        async function eliminarPedidos(eventos) {
             const id = document.getElementById('ideliminar').value;
     
             const respuesta = await fetch(`${urlAPI}/${id}`, {
                 method: 'DELETE'              
             });
     
-            cargarUsuarios();
+            cargarPedidos();
             document.getElementById('modalEliminar').classList.add('hidden');
             eventos.target.reset();
         }

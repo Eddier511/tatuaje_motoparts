@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Tatuaje Moto Parts</title>
+    <title>Tatuaje Moto Parts - Facturas</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -46,28 +46,32 @@
         <form id="formulariocrear">
             <div class="space-y-4">
                 <div>
+                    <label for="pedido_id" class="block text-sm font-medium text-gray-700">ID Pedido:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="pedido_id" id="pedido_id" placeholder="Id Pedido"  />
+                </div>
+                <div>
                     <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
                     <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="nombre" id="nombre" placeholder="Nombre"  />
                 </div>
                 <div>
-                    <label for="apellido" class="block text-sm font-medium text-gray-700">Apellido</label>
-                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="apellido" id="apellido" placeholder="Apellido" />
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
                     <input required type="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="email" id="email" placeholder="Email" />
                 </div>
                 <div>
-                    <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
-                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="telefono" id="telefono" placeholder="Teléfono" />
+                    <label for="empleado" class="block text-sm font-medium text-gray-700">Empleado:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="empleado" id="empleado" placeholder="Empleado" />
                 </div>
                 <div>
-                    <label for="direccion" class="block text-sm font-medium text-gray-700">Dirección</label>
-                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="direccion" id="direccion" placeholder="Direccion" />
+                    <label for="fecha" class="block text-sm font-medium text-gray-700">Fecha:</label>
+                    <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="fecha" id="fecha" placeholder="Fecha" />
                 </div>
                 <div>
-                    <label for="fecha_registro" class="block text-sm font-medium text-gray-700">Fecha de registro</label>
-                    <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="fecha_registro" id="fecha_registro" placeholder="Fecha"  />
+                    <label for="monto" class="block text-sm font-medium text-gray-700">Monto:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="monto" id="monto" placeholder="Monto" />
+                </div>
+                <div>
+                    <label for="metodo_pago" class="block text-sm font-medium text-gray-700">Metodo de Pago:</label>
+                    <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" name="metodo_pago" id="metodo_pago" placeholder="Metodo de Pago" />
                 </div>
                 <div class="flex space-x-4">
                     <button type="reset" class="bg-red-500 text-white px-4 py-2 rounded-md">Limpiar</button>
@@ -85,12 +89,13 @@
                 <thead>
                     <tr class="bg-gray-800 text-white">
                         <th class="px-4 py-2">Id</th>
+                        <th class="px-4 py-2">Id Pedido</th>
                         <th class="px-4 py-2">Nombre</th>
-                        <th class="px-4 py-2">Apellido</th>
                         <th class="px-4 py-2">Email</th>
-                        <th class="px-4 py-2">Teléfono</th>
-                        <th class="px-4 py-2">Dirección</th>
-                        <th class="px-4 py-2">Fecha Registro</th>
+                        <th class="px-4 py-2">Empleado</th>
+                        <th class="px-4 py-2">Fecha</th>
+                        <th class="px-4 py-2">Monto</th>
+                        <th class="px-4 py-2">Metodo de Pago</th>
                         <th class="px-4 py-2">Acciones</th>
                     </tr>
                 </thead>
@@ -110,28 +115,32 @@
                         <input disabled type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="ideditar" name="ideditar" />
                     </div>
                     <div>
-                        <label for="nombreeditar" class="block text-sm font-medium text-gray-700">Nombre</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="nombreeditar" name="nombreeditar" />
+                        <label for="pedido_ideditar" class="block text-sm font-medium text-gray-700">ID Pedido</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="pedido_ideditar" name="pedido_ideditar" />
                     </div>
                     <div>
-                        <label for="apellidoeditar" class="block text-sm font-medium text-gray-700">Apellido</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="apellidoeditar" name="apellidoeditar" />
+                        <label for="nombreeditar" class="block text-sm font-medium text-gray-700">Nombre</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="nombreeditar" name="nombreeditar" />
                     </div>
                     <div>
                         <label for="emaileditar" class="block text-sm font-medium text-gray-700">Email</label>
                         <input required type="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="emaileditar" name="emaileditar" />
                     </div>
                     <div>
-                        <label for="telefonoeditar" class="block text-sm font-medium text-gray-700">Teléfono</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="telefonoeditar" name="telefonoeditar" />
+                        <label for="empleadoeditar" class="block text-sm font-medium text-gray-700">Empleado</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="empleadoeditar" name="empleadoeditar" />
                     </div>
                     <div>
-                        <label for="direccioneditar" class="block text-sm font-medium text-gray-700">Dirección</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="direccioneditar" name="direccioneditar" />
+                        <label for="fechaeditar" class="block text-sm font-medium text-gray-700">Fecha</label>
+                        <input required type="date" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="fechaeditar" name="fechaeditar" />
                     </div>
                     <div>
-                        <label for="fecha_registroeditar" class="block text-sm font-medium text-gray-700">Fecha de registro</label>
-                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="fecha_registroeditar" name="fecha_registroeditar" />
+                        <label for="montoeditar" class="block text-sm font-medium text-gray-700">Monto</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="montoeditar" name="montoeditar" />
+                    </div>
+                    <div>
+                        <label for="metodo_pagoeditar" class="block text-sm font-medium text-gray-700">Metodo de Pago</label>
+                        <input required type="text" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md" id="metodo_pagoeditar" name="metodo_pagoeditar" />
                     </div>
                     <div class="flex space-x-4">
                         <button type="reset" class="bg-red-500 text-white px-4 py-2 rounded-md">Limpiar</button>
@@ -175,10 +184,10 @@
             document.getElementById('contenedorTabla').classList.add('hidden');
         }
 
-        const urlAPI = 'http://localhost:8000/usuarios';
+        const urlAPI = 'http://localhost:8000/facturas';
     
-        // Mostrar usuarios
-        async function cargarUsuarios() {
+        // Mostrar Facturas
+        async function cargarFacturas() {
             const respuesta = await fetch(urlAPI);
             const datos = await respuesta.json();
     
@@ -189,15 +198,16 @@
                 const fila = `
                     <tr>
                         <td class="px-4 py-2 border-b text-center">${element._id}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.pedido_id}</td>
                         <td class="px-4 py-2 border-b text-center">${element.nombre}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.apellido}</td>
                         <td class="px-4 py-2 border-b text-center">${element.email}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.telefono}</td>                            
-                        <td class="px-4 py-2 border-b text-center">${element.direccion}</td>
-                        <td class="px-4 py-2 border-b text-center">${element.fecha_registro}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.empleado}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.fecha}</td>                            
+                        <td class="px-4 py-2 border-b text-center">${element.monto}</td>
+                        <td class="px-4 py-2 border-b text-center">${element.metodo_pago}</td>
                         <td class="px-4 py-2 border-b text-center">
                             <button class="bg-red-500 text-white px-4 py-2 rounded-md" onclick="abriModalEliminar('${element._id}')">Eliminar</button>
-                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md ml-2" onclick="abriModalEditar('${element._id}', '${element.nombre}', '${element.apellido}', '${element.email}', '${element.telefono}', '${element.direccion}', '${element.fecha_registro}')">Editar</button>
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md ml-2" onclick="abriModalEditar('${element._id}', '${element.pedido_id}','${element.nombre}', '${element.email}', '${element.empleado}', '${element.fecha}', '${element.monto}', '${element.metodo_pago}')">Editar</button>
                         </td>
                     </tr>
                 `;
@@ -207,32 +217,33 @@
             console.log(datos);
         }
     
-        cargarUsuarios();
+        cargarFacturas();
     
         document.getElementById('formulariocrear').addEventListener('submit', async (e) => {
             e.preventDefault();
-            crearUsuarios(e);
+            crearFacturas(e);
         });
     
         document.getElementById('formularioeditar').addEventListener('submit', async (e) => {
             e.preventDefault();
-            editarUsuarios(e);
+            editarFacturas(e);
         });
     
         document.getElementById('formularioeliminar').addEventListener('submit', async (e) => {
             e.preventDefault();
-            eliminarUsuarios(e);
+            eliminarFacturas(e);
         });
     
-        // Crear usuario
-        async function crearUsuarios(eventos) {
-            const nuevoUsuario = {
+        // Crear Factura
+        async function crearFacturas(eventos) {
+            const nuevaFactura = {
+                pedido_id: document.getElementById('pedido_id').value,
                 nombre: document.getElementById('nombre').value,
-                apellido: document.getElementById('apellido').value,
                 email: document.getElementById('email').value,
-                telefono: document.getElementById('telefono').value,
-                direccion: document.getElementById('direccion').value,
-                fecha_registro: document.getElementById('fecha_registro').value,
+                empleado: document.getElementById('empleado').value,
+                fecha: document.getElementById('fecha').value,
+                monto: document.getElementById('monto').value,
+                metodo_pago: document.getElementById('metodo_pago').value,
             };
     
             const respuesta = await fetch(urlAPI, {
@@ -240,37 +251,39 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(nuevoUsuario)
+                body: JSON.stringify(nuevaFactura)
             });
     
-            cargarUsuarios();
+            cargarFacturas();
             eventos.target.reset();
         }
     
         // Abrir modal de edición
-        function abriModalEditar(id, nombre, apellido, email, telefono, direccion, fecha_registro) {
+        function abriModalEditar(id, pedido_id, nombre, email, empleado, fecha, monto, metodo_pago) {
             document.getElementById('ideditar').value = id;
+            document.getElementById('pedido_ideditar').value = pedido_id;
             document.getElementById('nombreeditar').value = nombre;
-            document.getElementById('apellidoeditar').value = apellido;
             document.getElementById('emaileditar').value = email;
-            document.getElementById('telefonoeditar').value = telefono;
-            document.getElementById('direccioneditar').value = direccion;
-            document.getElementById('fecha_registroeditar').value = fecha_registro;
+            document.getElementById('empleadoeditar').value = empleado;
+            document.getElementById('fechaeditar').value = fecha;
+            document.getElementById('montoeditar').value = monto;
+            document.getElementById('metodo_pagoeditar').value = metodo_pago;
     
             document.getElementById('modalEditar').classList.remove('hidden');
         }
     
-        // Editar usuario
-        async function editarUsuarios(eventos) {
+        // Editar Factura
+        async function editarFacturas(eventos) {
             const id = document.getElementById('ideditar').value;
     
-            const editarUsuario = {
+            const editarFactura = {
+                pedido_id: document.getElementById('pedido_ideditar').value,
                 nombre: document.getElementById('nombreeditar').value,
-                apellido: document.getElementById('apellidoeditar').value,
                 email: document.getElementById('emaileditar').value,
-                telefono: document.getElementById('telefonoeditar').value,
-                direccion: document.getElementById('direccioneditar').value,
-                fecha_registro: document.getElementById('fecha_registroeditar').value
+                empleado: document.getElementById('empleadoeditar').value,
+                fecha: document.getElementById('fechaeditar').value,
+                monto: document.getElementById('montoeditar').value,
+                metodo_pago: document.getElementById('metodo_pagoeditar').value
             };
     
             const respuesta = await fetch(`${urlAPI}/${id}`, {
@@ -278,10 +291,10 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(editarUsuario)
+                body: JSON.stringify(editarFactura)
             });
     
-            cargarUsuarios();
+            cargarFacturas();
             document.getElementById('modalEditar').classList.add('hidden');
             eventos.target.reset();
         }
@@ -292,15 +305,15 @@
             document.getElementById('modalEliminar').classList.remove('hidden');
         }
     
-        // Eliminar usuario
-        async function eliminarUsuarios(eventos) {
+        // Eliminar Factura
+        async function eliminarFacturas(eventos) {
             const id = document.getElementById('ideliminar').value;
     
             const respuesta = await fetch(`${urlAPI}/${id}`, {
                 method: 'DELETE'              
             });
     
-            cargarUsuarios();
+            cargarFacturas();
             document.getElementById('modalEliminar').classList.add('hidden');
             eventos.target.reset();
         }

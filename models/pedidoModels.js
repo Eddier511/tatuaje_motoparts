@@ -3,12 +3,11 @@ const mongoose = require("mongoose");
 //Modelo de datos Pedido
 const PedidoSchema = new mongoose.Schema(
     {
-        usuario: String,
+        nombre: String,
         fecha_pedido: String,
         estado: String,
         total: String,
-        direccion_envio: String,
-        metodo_pago: String
+        direccion_envio: String
     }
 );
 
